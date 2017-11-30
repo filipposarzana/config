@@ -1,0 +1,20 @@
+[core]
+	excludesfile = /home/filippo/.gitignore_global
+[user]
+	email = filippo@sarzana.me
+	name = Filippo Sarzana
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[alias]
+  gh-start = !gh-start
+  gh-pr = !gh-pr
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	fp = !git fetch && git branch --merged | egrep -v \"(^\\*|master|develop)\" | (xargs git branch -d 2> /dev/null || echo \"No merged branches to be pruned\")
+	spp = !git stash && git pull && git stash pop

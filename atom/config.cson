@@ -1,0 +1,49 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "ca7ed280-2f7e-43ca-9d7e-2bf05e88b488"
+    scss: {}
+  "atom-material-ui":
+    colors:
+      abaseColor: "#607d8b"
+    fonts:
+      fontSize: 15
+    tabs:
+      compactTabs: true
+    treeView:
+      compactList: true
+    ui:
+      panelContrast: true
+      panelShadows: true
+  "atom-package-deps":
+    ignored: []
+  core:
+    projectHome: "/home/filippo/web"
+    telemetryConsent: "limited"
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
+  editor:
+    atomicSoftTabs: false
+    fontSize: 10
+    preferredLineLength: 120
+    softWrap: true
+    tabType: "soft"
+    zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "5e32ea6f-e715-4d87-a6f9-6622a7f05326"
+  jshint:
+    supportLintingJsx: true
+    validateOnlyOnSave: true
+  "one-dark-ui":
+    fontSize: 12
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+".js.jsx.source":
+  editor:
+    softWrapAtPreferredLineLength: true

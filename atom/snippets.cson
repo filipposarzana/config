@@ -1,0 +1,143 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+'.source.js':
+  'console.log':
+    'prefix': 'log'
+    'body': 'console.log(${1})$2'
+  'console.error':
+    'prefix': 'error'
+    'body': 'console.error(${1})$2'
+  'console.warn':
+    'prefix': 'warn'
+    'body': 'console.warn(${1})$2'
+  'console.info':
+    'prefix': 'info'
+    'body': 'console.info(${1})$2'
+  'console.time':
+    'prefix': 'time'
+    'body': 'console.time(${1})$2'
+  'this.props':
+    'prefix': 'pd'
+    'body': 'const { ${1} } = this.props${2}'
+  'this.state':
+    'prefix': 'sd'
+    'body': 'const { ${1} } = this.state${2}'
+  'lamba':
+    'prefix': 'lamba'
+    'body': '${1} = (${2}) => {${3}}'
+  'try':
+    'prefix': 'try'
+    'body': """
+      try {
+        ${1}
+      } catch (error) {
+        ${2}
+
+        return
+      }${3}
+    """
+  'tryfinally':
+    'prefix': 'tryfinally'
+    'body': """
+      try {
+        ${1}
+      } catch (error) {
+        ${3}
+
+        return
+      } finally {
+        ${3}
+      }${4}
+    """
+  'react.class':
+    'prefix': 'rc'
+    'body': """
+      class ${1} extends PureComponent {
+        constructor(props) {
+          super(props)
+        }
+      }
+    """
+  'react.connect':
+    'prefix': 'rcn'
+    'body': """
+      ${1}.propTypes = {}
+
+      const mapStateToProps = state => ({
+        prop: () => {},
+      })
+
+      const mapDispatchToProps = dispatch => ({
+        dispatchAction: () => dispatch(dispatchActionAction()),
+      })
+
+      export default connect(
+        mapStateToProps,
+        mapDispatchToProps,
+      )(${1})
+    """
+  'react.class.connect':
+    'prefix': 'rcc'
+    'body': """
+      class ${1} extends PureComponent {
+        constructor(props) {
+          super(props)
+        }
+      }
+
+      ${1}.propTypes = {}
+
+      const mapStateToProps = state => ({
+        prop: () => {},
+      })
+
+      const mapDispatchToProps = dispatch => ({
+        dispatchAction: () => dispatch(dispatchActionAction()),
+      })
+
+      export default connect(
+        mapStateToProps,
+        mapDispatchToProps,
+      )(${1})
+    """
+  'react.component':
+    'prefix': 'rco'
+    'body': """
+      const ${1} = props => (
+
+      )
+
+      ${1}.propTypes = {}
+
+      const mapStateToProps = state => ({
+        prop: () => {},
+      })
+
+      const mapDispatchToProps = dispatch => ({
+        ${2}: () => dispatch(${2}Action()),
+      })
+
+      export default connect(
+        mapStateToProps,
+        mapDispatchToProps,
+      )(${1})
+    """
