@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+GONE_BRANCHES=$(git branch -v | grep '\[gone\]')
+
+for GONE_BRANCH in $GONE_BRANCHES
+do
+  if [[ ${GONE_BRANCH} =~ [feature|fix]*\/(TECH|[0-9]+)\-[a-zA-Z0-9\-]*$ ]]; then
+    git branch -D $GONE_BRANCH
+  fi
+done

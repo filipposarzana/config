@@ -16,5 +16,5 @@
 	st = status
 	unstage = reset HEAD --
 	last = log -1 HEAD
-	fp = !git fetch && git branch --merged | egrep -v \"(^\\*|master|develop)\" | (xargs git branch -d 2> /dev/null || echo \"No merged branches to be pruned\")
+	fp = !git fetch && git-remove-gone
 	spp = !git stash && git pull && git stash pop
