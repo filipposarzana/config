@@ -1,0 +1,63 @@
+{
+  "form-renderer": {
+    "entry": "horizontal",
+    "layout": [
+      [
+        [
+          "cd ~/web/form-renderer && git status",
+          "cd ~/web/form-renderer && yarn start"
+        ],
+        [
+          "cd ~/web/form-renderer && yarn eslint:watch",
+          "cd ~/web/form-renderer && yarn test"
+        ]
+      ]
+    ]
+  },
+  "frontend": {
+    "entry": "horizontal",
+    "layout": [
+      [
+        [
+          "cd ~/web/frontend && git status",
+          "cd ~/web/frontend && yarn-docker style:lint:watch",
+          "cd ~/web/frontend && docker logs -f pp_frontend"
+        ],
+        [
+          "cd ~/web/frontend && yarn eslint:watch",
+          "cd ~/web/frontend && yarn test:watch"
+        ]
+      ]
+    ]
+  },
+  "native": {
+    "entry": "horizontal",
+    "layout": [
+      [
+        [
+          "cd ~/web/frontend && emulator -avd pixel -writable-system",
+          "cd ~/web/frontend && emulator -avd 34 -writable-system"
+        ],
+        [
+          "cd ~/web/frontend && yarn native:start:android",
+          "cd ~/web/frontend && react-debugger"
+        ]
+      ]
+    ]
+  },
+  "react-rating": {
+    "entry": "horizontal",
+    "layout": [
+      [
+        [
+          "cd ~/Documents/react-rating && git status",
+          "cd ~/Documents/react-rating && yarn eslint:watch"
+        ],
+        [
+          "cd ~/Documents/react-rating && yarn test:watch",
+          "cd ~/Documents/react-rating && yarn start"
+        ]
+      ]
+    ]
+  }
+}
