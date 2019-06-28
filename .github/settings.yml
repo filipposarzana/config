@@ -17,11 +17,11 @@ labels:
   - name: "@points/2"
     color: fef2c0
   - name: "@points/3"
-    color: 01deff
+    color: fef2c0
   - name: "@points/4"
-    color: 006b75
+    color: fef2c0
   - name: "@points/5"
-    color: 608000
+    color: fef2c0
     
   - name: area/TECH
     color: fef2c0
