@@ -1,6 +1,7 @@
 repository:
   name: config
   description: Filippo Sarzana's config
+  has_projects: false
   has_wiki: false
   
 labels:
