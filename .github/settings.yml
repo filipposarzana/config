@@ -1,3 +1,8 @@
+repository:
+  name: config
+  description: Filippo Sarzana's config
+  has_wiki: false
+  
 labels:
   - name: "#squad/FOO"
     color: b0bec5
